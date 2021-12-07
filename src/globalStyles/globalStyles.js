@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     background: #F8f9fa;
     color: #000;
-    font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+    font-family: 'Roboto', sans-serif;
     transition: all 0.25s linear;
   }
 `;
