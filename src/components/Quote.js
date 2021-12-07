@@ -1,10 +1,14 @@
-import {StyledQuote, StyledIconL, StyledIconR,StyledAuthor} from './styles/QuoteStyles'
+import {StyledQuoteContainer, StyledQuote, StyledIconL, StyledIconR, StyledAuthor} from './styles/QuoteStyles'
 
 const Quote = ({quote}) => {
     return (
         <>
-            <StyledQuote><StyledIconL/><p>{quote.quote}</p><StyledAuthor>-{quote.author}</StyledAuthor><StyledIconR/></StyledQuote>
-
+            <StyledQuoteContainer>
+                <StyledIconL/>
+                <StyledQuote>{quote.quote}</StyledQuote>
+                <StyledAuthor>-{quote.author}-</StyledAuthor>
+                <StyledIconR/>
+            </StyledQuoteContainer>
         </>
     )
 }

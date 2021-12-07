@@ -1,18 +1,13 @@
-import styled, {css} from 'styled-components'
+import styled from 'styled-components'
 import {colors} from "../../globalStyles/variables";
 import {RiDoubleQuotesL, RiDoubleQuotesR} from "react-icons/ri"
+import {device} from "../../globalStyles/device"
 
-export const StyledQuote = styled.div`
-  width: 40%;
-  min-height: 200px;
+export const StyledQuoteContainer = styled.div`
+  width: 90%;
+  min-height: 400px;
   border-radius: 5px;
-  background-color: #fff;
-  border-radius: 5px;
-  //box-shadow: rgb(0 0 0 / 20%) 0px 0px 11px;
-
-  transform: scale(1.05);
-  border-bottom: none;
-  justify-self: center;
+  box-shadow: rgb(0 0 0 / 20%) 0px 0px 11px;
   margin: 10px;
   transition: all 0.2s ease 0s;
   cursor: pointer;
@@ -23,6 +18,26 @@ export const StyledQuote = styled.div`
   align-items: center;
   position: relative;
   text-align: center;
+  @media ${device.tablet} {
+    width: 60%;
+    min-height: 200px;
+  }
+  @media ${device.desktop} {
+    width: 40%;
+  }
+  
+`
+export const StyledAuthor = styled.p`
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: ${colors.textLight};
+  font-family: 'EB Garamond', serif;
+`
+export const StyledQuote = styled.p`
+  font-size: 20px;
+  color: ${colors.text};
+  margin-bottom: 20px;
+  font-family: 'EB Garamond', serif;
 `
 export const StyledIconL = styled(RiDoubleQuotesL)`
   position: absolute;
@@ -37,10 +52,4 @@ export const StyledIconR = styled(RiDoubleQuotesR)`
   bottom: -20px;
   font-size: 40px;
   color: ${colors.primary};
-`
-export const StyledAuthor = styled.p`
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: ${colors.text};
-  font-family: 'EB Garamond', serif;
 `
