@@ -10,11 +10,11 @@ export const StyledAppWrapper = styled.div`
 `
 
 export const StyledButtonContainer = styled.div`
-  margin: 100px 0;
   display: grid;
   grid-template-columns: repeat(1,1fr);
   align-items: center;
   @media ${device.mobile} {
     grid-template-columns: repeat(2,1fr);
+    margin: 100px 0;
   }
 `
